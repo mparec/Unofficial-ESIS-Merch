@@ -110,6 +110,10 @@ int main() {
 								carrito += P.precio[pe];
 								P.cantidad[pe]--;
 								cout << "Precio acumulado: $" << carrito << endl;
+								cout << "Articulos en el carrito: " << aeec << endl;
+								if (aeec >= 3) {
+									cout << "DESCUENTO ACTIVADO!!!" << endl;
+								}
 							} else {
 								cout << "Lo sentimos, no puedes agregar mas articulos" << endl;
 							}
