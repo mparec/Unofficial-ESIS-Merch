@@ -15,12 +15,26 @@ struct Productos {
 int main() {
 	// Variables globales
 	Productos P;
-	double Bolsillo_derecho = 500.0;
+	double Bolsillo_derecho; // Declaramos la variable.
 	double carrito = 0.0;
 	string cola; // ID ingresado
 	int aeec = 0; // Articulos en el carrito
 	bool producto_encontrado = false;
 	
+	// SOLICITAR EL SALDO INICIAL AL USUARIO
+    system("cls"); // Limpia la pantalla antes de empezar
+    cout << "=============================================" << endl;
+    cout << "          BIENVENIDO A ESIS MERCH            " << endl;
+    cout << "=============================================" << endl;
+    cout << ">> Ingrese el saldo inicial de su bolsillo: $";
+    cin >> Bolsillo_derecho; 
+    
+    // Validamos que no ingrese un número negativo por error
+    while (Bolsillo_derecho < 0) {
+        cout << "El saldo no puede ser negativo. Intente de nuevo: $";
+        cin >> Bolsillo_derecho;
+    }
+
 	while (true) {
 		cout << // MENU
 		"=============================================" << endl <<
