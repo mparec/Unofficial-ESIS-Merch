@@ -47,7 +47,7 @@ int main() {
 				"NOTA IMPORTANTE: A partir del 3er articulo en" << endl <<
 				"el carrito obten un 33% de descuento!" << endl <<
 				"DATO EXTRA: Para comprar el carrito ingresa" << endl <<
-				"el ID 'ESIS-2026' en la tienda." << endl;
+				"el ID '!buy' en la tienda." << endl;
 				break;
 				
 			case '2': {
@@ -73,12 +73,18 @@ int main() {
 				
 				// ID Secreto
 				
-				if (cola == "ESIS-2026") { // AQUI SE USARA UNA FUNCION DE LA CABECERA
-					comprar(Bolsillo_derecho, carrito, aeec);
-					cout << 
-					"---------------------------------------------" << endl <<
-					"Carrito comprado!!!" << endl <<
-					"Tu bolsillo: $" << Bolsillo_derecho << endl;
+				if (cola == "!buy") { // AQUI SE USARA UNA FUNCION DE LA CABECERA
+                    if (aeec > 0) {
+                        comprar(Bolsillo_derecho, carrito, aeec);
+                        cout << 
+                        "---------------------------------------------" << endl <<
+				    	"Carrito comprado!!!" << endl <<
+			    		"Tu bolsillo: $" << Bolsillo_derecho << endl;
+                    } else {
+                        cout << "Lo sentimos, no agregaste nada aun" << endl;
+                        break;
+                    }
+
 				} else {
 					// Bucle de busqueda
 					
